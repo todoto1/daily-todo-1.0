@@ -9,7 +9,7 @@
     body {
       margin: 0;
       padding: 20px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: sans-serif;
       background: #ffffff;
       display: flex;
       justify-content: center;
@@ -179,7 +179,7 @@
 <body>
   <div class="widget">
     <div class="header">
-      <div class="title">Daily To-do</div>
+      <div class="title">todoto Daily To-do</div>
       <div class="date" id="todayDate"></div>
     </div>
 
@@ -273,8 +273,8 @@
       const saved = JSON.parse(localStorage.getItem('todos') || '[]');
       if (saved.length === 0) {
         // 기본 항목 제공
-        addTodoItem("Call with Robert");
-        addTodoItem("Friday meeting", true);
+        addTodoItem("물 1리터 마시기");
+        addTodoItem("투두투 팔로우하기", true);
       } else {
         saved.forEach(item => addTodoItem(item.text, item.checked));
       }
@@ -286,6 +286,7 @@
   </script>
 </body>
 </html>
+
 
 
 
